@@ -25,7 +25,7 @@
               <span class="mdi mdi-coins color-inherit" title="Saving to {{ outgoing.linked_saving.name }}"></span>
             {% endif %}
           </td>
-          <td>£{{ "{:,.2f}".format(outgoing.value) }}</td>
+          <td>{{ "{:,.2f}".format(outgoing.value) }}€</td>
           <td class="stretch hide-on-mobile">
             {% if outgoing.is_dated %}
               <span class="mdi mdi-calendar color-inherit" title="{{ outgoing.date_tooltip }}"></span>
