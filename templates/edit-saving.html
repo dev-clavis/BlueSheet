@@ -10,7 +10,7 @@
     <input type="text" name="name" minlength="1" maxlength="255" value="{{ saving.name }}" required>
 
     <span class="input-label">Balance</span>
-    £ <input type="number" name="balance" step="0.01" min="0" value="{{ '{:.2f}'.format(saving.balance) }}" required>
+    <input type="number" name="balance" step="0.01" min="0" value="{{ '{:.2f}'.format(saving.balance) }}" required> €
     
     <span class="input-label">Notes</span>
     <textarea name="notes">{{ saving.notes if saving.notes }}</textarea>
