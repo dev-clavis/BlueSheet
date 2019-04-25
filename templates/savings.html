@@ -11,7 +11,7 @@
           <td class="hide-on-mobile">{{ saving.id }}</td>
           <td>{{ saving.name }}</td>
           <td>
-            £ {{ '{:,.2f}'.format(saving.balance) }} 
+            {{ '{:,.2f}'.format(saving.balance) }} € 
             <span
               {% if saving.needs_balance_update %}
                 class="mdi mdi-clock-alert-outline alert"
