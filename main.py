@@ -485,8 +485,8 @@ class Outgoing(db.Model):
 {start} {self.start_month_friendly}\n\
 {end} {self.end_month_friendly}\n\
 \n\
-{self.months_paid} payment(s) overall totaling £{self.payments_total:,.2f}\n\
-{self.months_paid_left} payment(s) left totaling £{self.payments_left_total:,.2f}"  # noqa
+{self.months_paid} payment(s) overall totaling {self.payments_total:,.2f}€\n\
+{self.months_paid_left} payment(s) left totaling {self.payments_left_total:,.2f}€"  # noqa
         elif self.start_month is not None:
             # Start Month Only
             return f"{start} {self.start_month_friendly}"
@@ -778,12 +778,12 @@ def get_starling_data():
     user = User.query.get(session["user_id"])
 
     data = {
-        "Main Balance": "£ {:,.2f}".format(
+        "Main Balance": "{:,.2f} €".format(
             user.starling_account.effective_balance
         )
     }
     for uid, savings_goal in user.starling_account.savings_goals.items():
-        data[savings_goal.name] = "£ {:,.2f}".format(
+        data[savings_goal.name] = "{:,.2f} €".format(
             savings_goal.total_saved_minor_units / 100
         )
 
