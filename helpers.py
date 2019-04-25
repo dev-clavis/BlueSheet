@@ -214,7 +214,7 @@ def spending_money_savings_target_balance(
     ) / total_payments_in
 
     if debug:
-        print(f"Monthly Saving Amount: £{monthly_saving_amount}")
+        print(f"Monthly Saving Amount: {monthly_saving_amount}€")
     # endregion
 
     target_balance = (monthly_saving_amount * payments_in) - (
@@ -222,7 +222,7 @@ def spending_money_savings_target_balance(
     )
 
     if debug:
-        print(f"Target Balance: £{target_balance}")
+        print(f"Target Balance: {target_balance}€")
 
     return target_balance
 
